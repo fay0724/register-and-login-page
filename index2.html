@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-box">
+      <form action="" name="Formfill" onsubmit="return validation()">
+        <h2>Log In</h2>
+        <div class="input-box">
+          <i class='bx bxs-envelope'></i>
+          <input type="email" name="Email" placeholder="Email" oninput="clearError('resultEmail')">
+          <p id="resultEmail"></p>
+        </div>
+        <div class="input-box">
+          <ion-icon name="eye-off-outline" onclick="togglePasswordVisibility('Password', this)"></ion-icon>
+          <input type="password" name="Password" placeholder="Password" oninput="clearError('resultPassword')">
+          <p id="resultPassword"></p>
+        </div>
+        <div class="btn-container">
+          <button type="submit" class="btn" onclick="return validation()">
+            <span id="btnText">Login</span>
+            <!-- <div class="loader loader-quart"></div> -->
+          </button>
+          <div class="group">
+            <span><a href="#">Forget Password</a></span>
+            <span><a href="index.html">Register</a></span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
